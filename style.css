@@ -4,9 +4,15 @@ h1 {
 @import url('https://fonts.googleapis.com/css?family=Montserrat:400,800');
 
 body{
-    background-color: rgb(192, 245, 227);
+    background-image: url(imagen.png);
     font-family: 'Montserrat', Georgia, 'Times New Roman', Times, serif sans-serif;
     color: #3E363F;
+}
+
+#titulo{  
+    text-align: center;
+    color: #04304b;
+
 }
 #contenedor{
     width: 900px;
@@ -15,10 +21,11 @@ body{
     position: absolute;
     inset: 0;
     margin: auto;
-    border-radius: 10px;
+    border-radius: 20px;
     overflow: hidden; 
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 
       0 10px 10px rgba(0,0,0,0.22);
+      
   }
 #calculadora{
     background: rgb(129, 230, 224);
@@ -28,11 +35,15 @@ body{
 
 }
 #detalle{
-    background: #d460a49d;
+    background: rgb(220,63,251);
+background: radial-gradient(circle, rgba(220,63,251,1) 0%, rgba(252,70,107,1) 100%);
     width: 50%;
     height: 100%;
     float: left;
     color: #f6f5f7;
+}
+#detalle .contenido{
+    text-align: justify;
 }
 .contenido{
     position: relative;
@@ -53,7 +64,8 @@ button {
       font-weight: bold;
       padding: 12px 45px;
       border-radius: 30px;
-      background-color: #FF416C;
+      background: rgb(220,63,251);
+background: radial-gradient(circle, rgba(220,63,251,1) 0%, rgba(252,70,107,1) 100%);
       border: 1px solid #FF416C;
       color: #FFFFFF;
       text-transform: uppercase;
@@ -61,14 +73,32 @@ button {
       transition: transform 20ms ease-in;
   }
 
-button:active {
+  button:active {
 	transform: scale(0.95);
 }
+
+.contenido button:hover {
+    cursor: pointer;
+    transform: scale(1.08);
+    transition: transform 0.5s ease-in-out;
+  }
+  
+  .contenido button:active {
+    transform: scale(0.9);
+    transition: transform 0.5s ease-in-out;
+  }
 #error{
     color: red;
     font-weight: bold;
     display: none;
 }
+
+#error2{
+    color: red;
+    font-weight: bold;
+    display: none;
+}
+
 
 .resultado{
     color: #0A81D1;
